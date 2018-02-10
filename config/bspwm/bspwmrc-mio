@@ -1,0 +1,59 @@
+#! /bin/sh
+
+sxhkd &
+
+bspc monitor DVI-D-0 -d 1 2 3 4 5 6
+
+bspc config border_width					2
+bspc config window_gap						8
+bspc config right_padding					0
+bspc config left_padding					0
+
+bspc config split_ratio						0.50
+bspc config borderless_monocle				true
+bspc config gapless_monocle					true
+bspc config focus_follows_pointer			false
+bspc config click_to_focus					true
+
+# Asignación de ventanas a espacios
+bspc rule -a Google-chrome-unstable desktop=^2
+bspc rule -a Firefox desktop=^3
+bspc rule -a Pcmanfm desktop=^4
+bspc rule -a Thunar desktop=^4
+bspc rule -a Gedit desktop=^5
+bspc rule -a Geany desktop=^5
+bspc rule -a Gvim desktop=^5
+#bspc rule -a discord desktop=^7
+bspc rule -a Spotify desktop=^6
+
+# Estados para ventanas especiales
+bspc rule -a Pavucontrol state=floating
+bspc rule -a mpv state=floating
+bspc rule -a feh state=floating
+bspc rule -a Fille-roller state=floating
+bspc rule -a Xarchiver state=floating
+bspc rule -a Viewnior state=floating
+
+# Configuración
+bspc config pointer_action1 move
+bspc config pointer_action2 none
+bspc config pointer_action3 resize_corner
+bspc config click_to_focus true
+bspc config presel_feedback_color \#aaaaaa
+
+# Aplicaciones y ajustes al inicio
+xsetroot -cursor_name left_ptr &
+compton &
+xrdb -merge ~/.Xresources &
+xset led 3 &
+~/.fehbg &
+dunst &
+#dunst &
+#mpd-notification &
+polybar top &
+# Barras
+#polybar main -c $HOME/.config/polybar/config &
+#polybar bottom -c $HOME/.config/polybar/config &
+
+# Iniciar Dropbox con un retraso de 60 segundos
+(sleep 60s && dropboxd) &

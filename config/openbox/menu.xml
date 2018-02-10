@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<openbox_menu xmlns="http://openbox.org/3.4/menu">
+
+<menu id="apps-term-menu" label="Terminales">
+  <item label="Urxvt">
+    <action name="Execute">
+      <command>urxvt</command>
+    </action>
+   </item>
+  <item label="Terminator">
+    <action name="Execute">
+      <command>terminator</command>
+    </action>
+   </item>
+</menu>
+
+<menu id="apps-net-menu" label="Navegadores">
+  <item label="Firefox">
+    <action name="Execute">
+      <command>firefox-beta</command>
+    </action>
+  </item>
+  <item label="Firefox Privado">
+    <action name="Execute">
+      <command>firefox-beta --private-window</command>
+    </action>
+   </item>
+  <item label="Chrome">
+    <action name="Execute">
+      <command>google-chrome-unstable</command>
+    </action>
+   </item>
+   <item label="Chrome Incognito">
+	   <action name="Execute">
+		   <command>google-chrome-unstable --incognito</command>
+	   </action>
+   </item>
+</menu>
+
+<menu id="apps-multimedia-menu" label="Música y Vídeos">
+  <item label="Mpv">
+    <action name="Execute">
+      <command>mpv --player-operation-mode=pseudo-gui --geometry=300</command>
+    </action>
+  </item>
+  <item label="Spotify">
+    <action name="Execute">
+      <command>spotify</command>
+    </action>
+  </item>
+  <item label="PavuControl">
+    <action name="Execute">
+      <command>pavucontrol</command>
+    </action>
+  </item>
+</menu>
+
+<menu id="apps-fileman-menu" label="Exploradores">
+  <item label="Thunar">
+    <action name="Execute">
+      <command>thunar</command>
+    </action>
+  </item>
+</menu>
+
+<menu id="apps-editors-menu" label="Editores">
+	<item label="Geany">
+		<action name="Execute">
+			<command>geany</commamd>
+		</action>
+	</item>
+</menu>
+
+<menu id="system-menu" label="Sistema">
+  <item label="Configurar Openbox">
+    <action name="Execute">
+      <command>obconf</command>
+    </action>
+  </item>
+  <item label="Recargar Openbox">
+    <action name="Reconfigure" />
+  </item>
+  <separator/>
+  <item label="Apagar">
+	  <action name="Execute">
+	  	<command>systemctl poweroff</command>
+	  </action>
+  </item>
+  <item label="Reiniciar">
+  	<action name="Execute">
+		<command>systemctl reboot</command>
+	</action>
+  </item>
+</menu>
+
+<menu id="root-menu" label="Openbox 3">
+  <separator label="Aplicaciones" />
+  <menu id="apps-accessories-menu"/>
+  <menu id="apps-editors-menu"/>
+  <menu id="apps-graphics-menu"/>
+  <menu id="apps-net-menu"/>
+  <menu id="apps-office-menu"/>
+  <menu id="apps-multimedia-menu"/>
+  <menu id="apps-term-menu"/>
+  <menu id="apps-fileman-menu"/>
+  <separator label="Sistema" />
+  <menu id="system-menu"/>
+  <separator />
+  <item label="Cerrar sesión">
+    <action name="Exit">
+      <prompt>yes</prompt>
+    </action>
+  </item>
+</menu>
+
+</openbox_menu>

@@ -1,0 +1,28 @@
+##
+# Cargar ajustes de Xresources
+xrdb -merge ~/.Xresources &
+
+# Cargar ajustes de nvidia-settings
+nvidia-settings --load-config-only &
+
+# Establecer fondo de pantalla
+~/.fehbg &
+
+# Encender teclado
+xset led 3 &
+
+# Iniciar compton
+compton &
+
+# Iniciar dunst
+dunst &
+
+# Iniciar dzen2
+dzen2 &
+
+# Iniciar polybar
+#polybar top &
+~/.config/polybar/launch.sh &
+
+# Iniciar Dropbox con dropbox-cli
+sleep 30s && dropbox-cli start &

@@ -1,0 +1,18 @@
+!#	##########################################
+!#	||	Alejandro García ~ nesmeck	||
+!#	##########################################
+
+!#
+
+!#	Variables
+!#
+#define fuente artwiz lemon
+#define tamFuente 8
+!#
+!#	Recursos
+!#
+#include "/home/alex/.xres/fonts"
+#include "/home/alex/.xres/urxvt"
+!#include "/home/alex/.xres/nord"
+#include "/home/alex/.xres/colors"
+#include "/home/alex/.xres/rofi"

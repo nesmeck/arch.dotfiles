@@ -1,0 +1,16 @@
+#!/bin/bash
+
+#Mi primer intento en bash scripting
+
+if [ $(mpc status | grep -o playing) ]
+    then
+    #Mis variables
+    artist=$(mpc current | cut -f 1 -d '-')
+    # Si la variable excede los 30 caracteres, recortarla
+    # Solo muestra el titulo
+    track=$(mpc current | awk -F ' - ' '{printf "%s", substr($2, 0, 30)}')
+    progress=$(mpc status | head -2 | tail -1 | cut -f 5 -d ' ')
+    echo " $progress | $artist - $track"
+else
+    echo " En pausa"
+fi

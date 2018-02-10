@@ -1,0 +1,17 @@
+#!/bin/sh
+# Testing notify-send with images
+
+img="$HOME/Dropbox/FUN/demonbits.png"
+
+notify-send -i $img "
+
+<span> Test </span>
+<span>======</span>
+<span>
+1
+2
+3
+4
+</span>
+
+"

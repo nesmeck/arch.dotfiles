@@ -1,0 +1,40 @@
+#!/bin/bash
+
+set -x
+#Mi primer intento en bash scripting
+
+if [ $(pgrep mpd) ] && [ $(pgrep spotify) ]
+then
+	if [ $(mpc status | grep -o playing) ] && [ $(playerctl --player=spotify status) = "Paused" ]
+	then
+		#Mis variables
+		title=$(mpc current)
+		progress=$(mpc status | head -2 | tail -1 | cut -f 5 -d ' ')
+		echo "$progress  -  $title"
+	elif [ $(mpc status | grep -o paused) ] && [ $(playerctl --player=spotify status) = "Playing" ]
+	then
+		title=$(playerctl --player=spotify metadata title)
+		artist=$(playerctl --player=spotify metadata artist)
+		echo " $artist - $title"
+	else
+		echo "En pausa"
+	fi
+elif [$(pgrep mpd)]
+then
+	if [ $(mpc status | grep -o playing) ]
+	then
+		title=$(mpc current)
+		progress=$(mpc status | head -2 | tail -1 | cut -f 5 -d ' ')
+		echo "$progress  -  $title"
+	fi
+elif [ $(pgrep spotify) ]
+then
+	if [ $(playerctl --player=spotify status) = "Playing" ]
+	then
+		title=$(playerctl --player=spotify metadata title)
+		artist=$(playerctl --player=spotify metadata artist)
+		echo " $artist - $title"
+	fi
+else
+	echo "No hay reproductores abiertos"
+fi

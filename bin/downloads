@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+# quit on error
+set -e
+
+notify-send --urgency=normal --app-name=Transmission --icon=/usr/share/icons/Faba/24x24/places/folder-download.svg "Descarga finalizada"

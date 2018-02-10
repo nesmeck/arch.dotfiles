@@ -1,0 +1,18 @@
+rofi.color-enabled: true
+
+rofi.color-window:    #121317, #121317, #198873
+rofi.color-normal:    #121317, #cdcdcd, #121317, #198873, #121317
+rofi.color-active:    #121317, #cdcdcd, #121317, #198873, #121317
+rofi.color-urgent:    #121317, #923a45, #121317, #923a45, #cdcdcd
+
+
+rofi.fake-transparency		: true
+rofi.font			: artwiz lemon 8
+rofi.columns			: 1
+rofi.separator-style		: none
+rofi.hide-scrollbar		: true
+rofi.location			: 0
+rofi.padding			: 12
+rofi.fullscreen			: false
+rofi.width			: 350
+rofi.lines			: 6

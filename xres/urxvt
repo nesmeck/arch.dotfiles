@@ -1,0 +1,122 @@
+
+!#	##   ##  #######  ##  ##  ##    ##  #######
+!#	##   ##  ##   ##    ##     #    #      #
+!#	##   ##  ##  #      ##      #  #       #
+!#	#######  ##   ##  ##  ##     ##        #
+
+
+!#	##########################################
+!#	||	Alejandro García ~ nesmeck	||
+!#	##########################################
+
+!#	General Config
+!#
+!# Titulo de la ventana
+URxvt.title:Terminal
+!# Bordes
+URxvt.internalBorder:20
+!#URxvt.externalBorder:10
+!#URxvt*colorBD:color0
+!# Profundidad (parece ser que es solo para obtener transparencia
+!# y debe usarse junto a un compositor como compton, xcompmgr)
+URxvt.depth:32
+!# Número de lineas entre filas
+URxvt.lineSpace:0
+!# Espaciado entre letras
+URxvt.letterSpace:1
+!# Cuántas líneas se guardan
+URxvt.saveLines:10000
+!# Tamaño de la ventana (ancho y alto en caracteres)
+URxvt.geometry:90x24
+!#URxvt.geometry:80x24
+!# Parpadeo del cursor
+URxvt.cursorBlink:false
+!# Fuentes
+URxvt.font:xft:fuente:size=tamFuente
+URxvt*boldFont:xft:fuente:normal:size=tamFuente
+URxvt*italicFont:xft:fuente:italic:autohint=true:size=tamFuente
+URxvt*boldItalicFont:xft:fuente:bolditalic:italic:autohint=true:size=tamFuente
+URxvt.Buffered:true
+!#
+!#
+
+
+!#	Barra de desplazamiento
+!#
+!# Estilo
+!#URxvt.scrollStyle:rxvt
+!# Activar/Desactivar la barra
+URxvt.scrollBar:false
+!# Cuando una salida de la TTY sea muy extensa, desplazar automaticamente
+URxvt.scrollTtyOutput:false
+!# Desplazar cuando se presione una teclado en la TTY
+URxvt.scrollTtyKeypress:true
+!# Desplazar mientras se esté procesando una salida
+URxvt.scrollWithBuffer:true
+!#
+!#
+
+!#	Extensiones PERL
+!#
+!# Activar extensiones (paquete urxvt-perls)
+!#URxvt.perl-ext-common:      default,clipboard,url-select,keyboard-select,resize-font
+!# Seleccionar una URL con Win+U
+!#URxvt.keysym.M-u: perl:url-select:select_next
+!# Autocopiar
+!#URxvt.url-select.autocopy:  true
+!# Botón para seleccionar
+!#URxvt.url-select.button:    2
+!# Subrayado en URL
+!#URxvt.url-select.underline: true
+!# Aplicación para abrir URL
+!#URxvt.url-launcher:         google-chrome-unstable
+!# Botón para comparar
+!#URxvt.matcher.button:       1
+
+
+
+!#	Atajos de teclado
+!#
+!# Incrementar tamaño de la fuente
+!#URxvt.keysym.C-Up:       perl:font-size:increase
+!# Disminuir tamaño de la fuente
+!#URxvt.keysym.C-Down:     perl:font-size:decrease
+!# Incrementar tamaño global (en todas las instancias de URxvt)
+!#URxvt.keysym.C-S-Up:     perl:font-size:incglobal
+!# Disminuir tamaño global (en todas las instancias de URxvt)
+!#URxvt.keysym.C-S-Down:   perl:font-size:decglobal
+!# Teclas Home y End para saltar del inicio y final de las lineas
+!#URxvt*keysym.Home:       \033[1~
+!#URxvt*keysym.End:        \033[4~
+!# Teclas para Copiar y Pegar con la extensión Clipboard
+!#URxvt.keysym.Shift-Control-V:   perl:clipboard:paste
+!#URxvt.keysym.Shift-Control-C:   perl:clipboard:copy
+!# Desactivar la 'caracteristica' de Ctrl+Shift
+URxvt.iso14755:            false
+URxvt.iso14755_52:         false
+!#
+!#
+
+
+!#	Pestañas
+!#
+!# Color de fondo para la barra de pestañas
+URxvt.tabbed.tabbar-bg:  -1
+!# Color de "foreground" para la barra de pestañas
+URxvt.tabbed.tabbar-fg:  -2
+!# Color de fondo de pestaña
+URxvt.tabbed.tab-bg:     -2
+!# Color de "foreground" de pestaña
+URxvt.tabbed.tab-fg:     -1
+!# Color de fondo para el titulo de las pestañas
+URxvt.tabbed.title-bg:   -1
+!# Color de "foreground" para el titulo de las pestañas
+URxvt.tabbed.title-fg:   -2
+!# Auto ocultar el modo de pestañas
+URxvt.tabbed.autohide:   true
+!# Mostrar el botón para nueva pestaña
+URxvt.tabbed.new-button: false
+!# Mostrar el titulo en modo pestañas
+URxvt.tabbed.title:      true
+!#
+!#
